@@ -1,6 +1,4 @@
 ###
-0x07_More_pointers_arrays_and_strings
+0x07_morepointers_arrays_and_strings_project
 
-
-
-This project contains more task on pointers, multi-dimensional arrays and strings.
+This project consists of more task on pointers, multidimensional arrays and strings.
