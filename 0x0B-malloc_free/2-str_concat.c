@@ -10,57 +10,42 @@
  * Return: Both the input of s1 & s2
  */
 
-int _strlen(char *s)
-{
-	unsigned int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-
-	return (i);
-}
-
-/**
- *str_concat - This function concatenates two string
- *@s1: first input to concat
- *@s2:  second input to concat
- *Return: Always an array dinamic
- */
-
 char *str_concat(char *s1, char *s2)
+
 {
-	char *dst;
-	unsigned int i, j, size;
+
+	char *conct;
+
+	int i, ci;
 
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
+	i = ci = 0;
 
+	while (s1[i] != '\0')
+	i++;
 
-	size = (_strlen(s1) + _strlen(s2) + 1);
+	while (s2[ci] != '\0')
+		ci++;
+	conct = malloc(sizeof(char) * (i + ci + 1));
 
+	if (conct == NULL)
+	return (NULL);
 
-	dst = (char *) malloc(size * sizeof(char));
+	i = ci = 0;
 
-	if (dst == 0)
+	while (s1[i] != '\0')
 	{
-		return (NULL);
+	conct[i] = s1[i];
+	i++;
 	}
-
-
-	for (i = 0; *(s1 + i) != '\0'; i++)
-		*(dst + i) = *(s1 + i);
-
-	for (j = 0; *(s2 + j) != '\0'; j++)
+	while (s2[ci] != '\0')
 	{
-		*(dst + i) = *(s2 + j);
-		i++;
+	conct[i] = s2[ci];
+	i++, ci++;
 	}
-
-	return (dst);
+	conct[i] = '\0';
+	return (conct);
 }
