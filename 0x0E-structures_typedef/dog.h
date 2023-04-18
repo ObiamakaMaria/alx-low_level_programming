@@ -7,7 +7,7 @@
  * @age: This  represents the second member
  * @owner: This represents the third member
  *
- * Description: Longer description
+ * Description: Defining a new struct
  */
 
 struct dog
@@ -33,5 +33,5 @@ char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 
 
-#endif
+#endif 
 
