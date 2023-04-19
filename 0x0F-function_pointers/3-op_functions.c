@@ -56,7 +56,8 @@
 		return (a / b);
 	}
 /**
- * op_mod -  This function returns the remainder of the division of two numbers.
+ * op_mod -  This function returns the remainder of the
+ * division of two numbers.
  * @a: The first number.
  * @b: The second number.
  *
