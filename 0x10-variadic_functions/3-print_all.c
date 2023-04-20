@@ -7,8 +7,8 @@
  * @format: list of types of arguments passed to the function
  * @... - This is an ellipsis which indicates that the function accepts
  * a variable number of arguments.
-
  */
+
 void print_all(const char * const format, ...)
 {
 	int i = 0;
@@ -21,9 +21,9 @@ void print_all(const char * const format, ...)
 	if (format)
 	{
 	while (format[i])
-	{
+		{
 		switch (format[i])
-	{
+		{
 		case 'c':
 		printf("%s%c", sep, va_arg(list, int));
 		break;
@@ -42,10 +42,10 @@ void print_all(const char * const format, ...)
 		default:
 		i++;
 		continue;
-	}
+		}
 		sep = ", ";
 		i++;
-	}
+		}
 	}
 		printf("\n");
 		va_end(list);
