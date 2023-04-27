@@ -1,4 +1,4 @@
-###my_singly_list_project
+###my_singly_lint_project
 
 
 This Project contains task on singly linked list , how to build and  use them in a program and how to acess the different data inside them.
