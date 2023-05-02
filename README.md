@@ -1,1 +1,1 @@
-This Repository contains projects on differnt concepts and task in C programming Language.
+This Repository contains projects on different concepts and task in C programming Language.
