@@ -26,7 +26,7 @@ int create_file(const char *filename, char *text_content)
 			len++;
 	}
 
-	fdes = open(filename, O_CREAT | O_RDWR | O_TRUNC | S_IRUSR | S_IWUSR, 0600);
+	fdes = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	o = write(fdes, text_content, len);
 
 	if (fdes == -1 || o == -1)
