@@ -2,12 +2,10 @@
 #include <stdio.h>
 
 
-/*
- * unsigned int binary_to_uint: This function converts a number
- * from  binary to Decimal.
+/**
+ * binary_to_uint - This function converts a number from  binary to Decimal.
  *
- * @b: This is the binary number string
- * .
+ * @b: This is the binary number string.
  * Return: This function returns the converted decimal number,
  * or 0 if the binary number is invalid.
  */
