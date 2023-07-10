@@ -15,13 +15,15 @@
 void print_error_exit(int exit_code, const char *format, ...)
 {
 	va_list args;
+
 	va_start(args, format);
 	vfprintf(stderr, format, args);
+
 	va_end(args);
 	exit(exit_code);
 }
 
-int main(int argc, char *argv[]) 
+int main(int argc, char *argv[])
 {
 	int fd_from;
 	int fd_to;
@@ -41,7 +43,8 @@ int main(int argc, char *argv[])
 	if (fd_from == -1)
 		print_error_exit(98, "Error: Can't read from file %s\n", file_from);
 
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+
 	if (fd_to == -1)
 		print_error_exit(99, "Error: Can't write to %s\n", file_to);
 
