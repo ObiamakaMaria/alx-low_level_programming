@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-#include <stdlib.h>
 
 /**
  * hash_table_create - Creates a new hash table.
@@ -9,33 +8,28 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *new_table = NULL;
+	hash_table_t *newest_table = NULL;
 	unsigned long int i;
 
 	if (size < 1)
 		return (NULL);
 
-	/* Allocating  memory for the hash table structure */
-	new_table = malloc(sizeof(hash_table_t));
-	if (new_table == NULL)
+	newest_table = malloc(sizeof(hash_table_t));
+	if (newest_table == NULL)
 		return (NULL);
 
-	/* Allocating  memory for the array of hash_node_t pointers (buckets) */
-	new_table->array = malloc(sizeof(hash_node_t *) * size);
-	if (new_table->array == NULL)
+	newest_table->array = malloc(sizeof(hash_node_t *) * size);
+	if (newest_table->array == NULL)
 	{
-		free(new_table);
+		free(newest_table);
 		return (NULL);
 	}
+	newest_table->size = size;
 
-	/* Initialize the size of the hash table */
-	new_table->size = size;
-
-	/* Initialize all elements of the array to NULL */
 	for (i = 0; i < size; i++)
 	{
-		new_table->array[i] = NULL;
+		newest_table->array[i] = NULL;
 	}
 
-	return (new_table);
+	return (newest_table);
 }
