@@ -1,5 +1,5 @@
 #This is a Makefile done using the implicit rules
-CC = gcc
+iCC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
