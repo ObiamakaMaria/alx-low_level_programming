@@ -12,6 +12,7 @@ int binary_search(int *array, size_t size, int value);
 void print_array(int *array, size_t start, size_t end);
 int jump_search(int *array, size_t size, int value);
 size_t min(size_t a, size_t b);
+int interpolation_search(int *array, size_t size, int value);
 
 
 
