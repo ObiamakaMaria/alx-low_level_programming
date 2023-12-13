@@ -1,13 +1,13 @@
 #include "search_algos.h"
 
 /**
- * advanced_binary - Searches for a value in a sorted array
- * using advanced binary search
+ * advanced_binary - This function searches for a value in a sorted
+ * array using advanced binary search
  * @array: Pointer to the first element of the array to search in
  * @size: Number of elements in array
  * @value: The value to search for
  * Return: The index where the first occurrence of value is
- *  located, or -1 if not found
+ *  located, OR -1 if not found
  */
 int advanced_binary(int *array, size_t size, int value)
 {
@@ -16,15 +16,15 @@ int advanced_binary(int *array, size_t size, int value)
 
 	return (adv_binary_search(array, 0, size - 1, value));
 }
-
 /**
- * adv_binary_search - Recursive binary search function
+ * adv_binary_search - This function is a recursive binary search
+ * function
  * @array: Pointer to the first element of the array to search in
  * @low: Starting index of the search range
  * @high: Ending index of the search range
  * @value: The value to search for
  * Return: The index where the first occurrence of value is
- * located, or -1 if not found
+ * located, OR -1 if not found
  */
 int adv_binary_search(int *array, size_t low, size_t high, int value)
 {
@@ -49,9 +49,9 @@ int adv_binary_search(int *array, size_t low, size_t high, int value)
 	else
 		return (adv_binary_search(array, low, mid - 1, value));
 }
-
 /**
- * adv_print_array - Prints the elements of an array within a given range
+ * adv_print_array - This functions prints the elements of an array
+ * within a given range
  * @array: Pointer to the first element of the array
  * @low: Starting index of the range
  * @high: Ending index of the range
