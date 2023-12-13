@@ -16,6 +16,9 @@ int interpolation_search(int *array, size_t size, int value);
 int new_binary_search(int *array, size_t low, size_t high, int value);
 int exponential_search(int *array, size_t size, int value);
 void print_array(int *array, size_t low, size_t high);
+int advanced_binary(int *array, size_t size, int value);
+int adv_binary_search(int *array, size_t low, size_t high, int value);
+void adv_print_array(int *array, size_t low, size_t high);
 
 
 
